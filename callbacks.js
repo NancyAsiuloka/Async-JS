@@ -3,6 +3,7 @@ const posts = [
     {title: 'Post Two', body: 'This is post two'}
 ];
 
+// output the post.title to the Dom
 function getPosts(){
     setTimeout(() => {
         let output = '';
@@ -13,4 +14,12 @@ function getPosts(){
     }, 1000);
 }
 
+function createPost(post){
+    setTimeout(() => {
+        posts.push(post);
+    }, 2000);
+}
+
 getPosts();
+
+createPost({ title: "Post Three", body: 'This is post three'});
